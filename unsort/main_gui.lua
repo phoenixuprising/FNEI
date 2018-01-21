@@ -35,7 +35,9 @@ function MainGui.init_template()
 
   ------------------ content -------------------
 
-        }}  
+          { type = "flow", name = content_tb_name, style = "fnei_settings_tab-flow" },
+
+        }}
       }}
     }}
   }
