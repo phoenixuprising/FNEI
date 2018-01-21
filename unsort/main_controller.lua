@@ -39,8 +39,8 @@ function MainController.open_craft_item(event)
 end
 
 function MainController.open_craft_fluid(event)
-  out(Tabs.get_cur_tab(tab_name))
-  
+  --out(Tabs.get_cur_tab(tab_name))
+  MainGui.draw_tabs(tabs_name)
 end
 
 function MainController.open_usage_item(event)

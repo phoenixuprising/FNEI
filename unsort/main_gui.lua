@@ -85,8 +85,18 @@ function MainGui.close_window()
 end
 
 function MainGui.draw_tabs(tabs_name)
-  local gui = Gui.get_gui(Gui.get_pos(), tab_flow_name)
-  Tabs.draw_tabs(gui, tabs_name)
+  local parent = Gui.get_gui(Gui.get_pos(), tab_flow_name)
+
+  for _, gui in pairs(parent.children) do
+    if gui and gui.valid then
+      out("destroy:", gui.name)
+      gui.destroy()
+    end
+  end
+
+  Gui.add_sprite_button(parent, {type = "sprite-button", name = "exit-key", style = "fnei_exit_button_style", tooltip = {"gui.exit"}})
+
+  --Tabs.draw_tabs(gui, tabs_name)
 end
 
 function MainGui.open_window()
