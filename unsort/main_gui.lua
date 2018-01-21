@@ -31,7 +31,9 @@ function MainGui.init_template()
 
   ------------------ tabs ------------------
 
-          { type = "flow", name = tab_flow_name, style = "fnei_settings_tab-flow" },
+          { type = "flow", name = tab_flow_name, style = "fnei_settings_tab-flow", children = {
+            {type = "sprite-button", name = "exit-key2", style = "fnei_exit_button_style", tooltip = {"gui.exit"}}
+          }},
 
   ------------------ content -------------------
 
@@ -97,7 +99,7 @@ function MainGui.draw_tabs(tabs_name)
   -- end
   if Player.get().name == "npo6ka" then
     local parent = Gui.get_gui(Gui.get_pos(), tab_flow_name)
-    Gui.add_sprite_button(parent, {type = "sprite-button", name = "exit-key2", style = "fnei_exit_button_style", tooltip = {"gui.exit"}})
+    --Gui.add_sprite_button(parent, {type = "sprite-button", name = "exit-key2", style = "fnei_exit_button_style", tooltip = {"gui.exit"}})
   end
 
   --Tabs.draw_tabs(gui, tabs_name)
