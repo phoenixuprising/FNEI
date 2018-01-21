@@ -94,7 +94,7 @@ function MainGui.draw_tabs(tabs_name)
     end
   end
 
-  Gui.add_sprite_button(parent, {type = "sprite-button", name = "exit-key", style = "fnei_exit_button_style", tooltip = {"gui.exit"}})
+  Gui.add_sprite_button(parent, {type = "sprite-button", name = "exit-key2", style = "fnei_exit_button_style", tooltip = {"gui.exit"}})
 
   --Tabs.draw_tabs(gui, tabs_name)
 end
