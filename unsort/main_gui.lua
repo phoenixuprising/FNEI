@@ -98,8 +98,8 @@ function MainGui.open_window()
   local gui = Gui.add_gui_template(Gui.get_pos(), main_gui_template)
   MainGui.draw_factorio_search_tab()
 
-  local sdf = Gui.get_gui(Gui.get_pos(), "header-label1")
-  local sdf2 = Gui.get_gui(Gui.get_pos(), "header-label2")
+  local sdf = Gui.get_gui(Gui.get_pos(), "header-label2")
+  local sdf2 = Gui.get_gui(Gui.get_pos(), "header-label1")
 
   return gui
 end
