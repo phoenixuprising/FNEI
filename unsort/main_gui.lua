@@ -98,12 +98,14 @@ function MainGui.open_window()
   local gui = Gui.add_gui_template(Gui.get_pos(), main_gui_template)
   MainGui.draw_factorio_search_tab()
 
+  local sdf = Gui.get_gui(Gui.get_pos(), "content_tb_name")
+
   return gui
 end
 
 function MainGui.draw_factorio_search_tab()
   
-  local gui = Gui.get_gui(Gui.get_pos(), "content_tb_name")
+  
 
   -- if gui then
   --   Gui.add_gui_template(gui, factorio_search_tab)
