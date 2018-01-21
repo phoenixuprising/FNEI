@@ -87,7 +87,7 @@ function MainGui.close_window()
 end
 
 function MainGui.draw_tabs(tabs_name)
-  local parent = Gui.get_gui(Gui.get_pos(), tab_flow_name)
+  
 
   -- for _, gui in pairs(parent.children) do
   --   if gui and gui.valid then
@@ -96,6 +96,7 @@ function MainGui.draw_tabs(tabs_name)
   --   end
   -- end
   if Player.get().name == "npo6ka" then
+    local parent = Gui.get_gui(Gui.get_pos(), tab_flow_name)
     Gui.add_sprite_button(parent, {type = "sprite-button", name = "exit-key2", style = "fnei_exit_button_style", tooltip = {"gui.exit"}})
   end
 
