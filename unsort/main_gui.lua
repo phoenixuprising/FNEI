@@ -96,7 +96,7 @@ function MainGui.open_window()
   MainGui.close_window()
 
   local gui = Gui.add_gui_template(Gui.get_pos(), main_gui_template)
-  --MainGui.draw_factorio_search_tab()
+  MainGui.draw_factorio_search_tab()
 
   return gui
 end
