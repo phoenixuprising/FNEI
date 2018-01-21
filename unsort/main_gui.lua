@@ -45,24 +45,24 @@ function MainGui.init_template()
   }
 
   factorio_search_tab = {
-    { type = "frame", name = "content-frame", direction = "vertical", children = {
-      { type = "label", name = "choose-item-label", caption = {"fnei.choose-item"} },
-      { type = "flow", name = "choose-item-flow", direction = "horizontal", children = {
-        { type = "choose-elem-button", name = "choose-item", elem_type = "item"},
-        { type = "flow", name = "choose-item-flow", direction = "vertical", children = {
-          { type = "button", name = "item-recipe", caption = {"fnei.recipe"}, event = contr.open_craft_item},
-          { type = "button", name = "item-usage", caption = {"fnei.usage"}, event = contr.open_usage_item },
-        }},
-      }},
-      { type = "label", name = "choose-fluid-label", caption = {"fnei.choose-fluid"} },
-      { type = "flow", name = "choose-fluid-flow", direction = "horizontal", children = {
-        { type = "choose-elem-button", name = "choose-fluid", elem_type = "fluid"},
-        { type = "flow", name = "choose-fluid-flow", direction = "vertical", children = {
-          { type = "button", name = "fluid-recipe", caption = {"fnei.recipe"}, event = contr.open_craft_fluid },
-          { type = "button", name = "fluid-usage", caption = {"fnei.usage"}, event = contr.open_usage_fluid },
-        }},
-      }},
-    }}
+    -- { type = "frame", name = "content-frame", direction = "vertical", children = {
+    --   { type = "label", name = "choose-item-label", caption = {"fnei.choose-item"} },
+    --   { type = "flow", name = "choose-item-flow", direction = "horizontal", children = {
+    --     { type = "choose-elem-button", name = "choose-item", elem_type = "item"},
+    --     { type = "flow", name = "choose-item-flow", direction = "vertical", children = {
+    --       { type = "button", name = "item-recipe", caption = {"fnei.recipe"}, event = contr.open_craft_item},
+    --       { type = "button", name = "item-usage", caption = {"fnei.usage"}, event = contr.open_usage_item },
+    --     }},
+    --   }},
+    --   { type = "label", name = "choose-fluid-label", caption = {"fnei.choose-fluid"} },
+    --   { type = "flow", name = "choose-fluid-flow", direction = "horizontal", children = {
+    --     { type = "choose-elem-button", name = "choose-fluid", elem_type = "fluid"},
+    --     { type = "flow", name = "choose-fluid-flow", direction = "vertical", children = {
+    --       { type = "button", name = "fluid-recipe", caption = {"fnei.recipe"}, event = contr.open_craft_fluid },
+    --       { type = "button", name = "fluid-usage", caption = {"fnei.usage"}, event = contr.open_usage_fluid },
+    --     }},
+    --   }},
+    -- }}
   }
 end
 
@@ -104,11 +104,11 @@ end
 function MainGui.draw_factorio_search_tab()
   local gui = Gui.get_gui(Gui.get_pos(), content_tb_name)
 
-  if gui then
-    Gui.add_gui_template(gui, factorio_search_tab)
-  else
-    Debag:error("Error in function MainGui.draw_factorio_search_tab(): gui == nil")
-  end
+  -- if gui then
+  --   Gui.add_gui_template(gui, factorio_search_tab)
+  -- else
+  --   Debag:error("Error in function MainGui.draw_factorio_search_tab(): gui == nil")
+  -- end
 end
 
 function MainGui.settings_key_event(event)
