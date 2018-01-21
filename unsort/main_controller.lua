@@ -14,7 +14,7 @@ function MainController.open()
   out("Main open")
 
   local gui = MainGui.open_window()
-  MainGui.draw_tabs(tab_name)
+  --MainGui.draw_tabs(tab_name)
 
   return gui
 end
@@ -28,7 +28,7 @@ function MainController.get_name()
 end
 
 function MainController.init_events()
-  Tabs.new(tab_name, MainGui.name, {"default-search", "fnei-search", "category-search"}, "fnei_settings_selected-tab", "fnei_settings_empty-tab", MainController.change_tab)
+  --Tabs.new(tab_name, MainGui.name, {"default-search", "fnei-search", "category-search"}, "fnei_settings_selected-tab", "fnei_settings_empty-tab", MainController.change_tab)
   MainGui.init_events()
 end
 
@@ -40,7 +40,7 @@ end
 
 function MainController.open_craft_fluid(event)
   --out(Tabs.get_cur_tab(tab_name))
-  MainGui.draw_tabs(tabs_name)
+  --MainGui.draw_tabs(tabs_name)
 end
 
 function MainController.open_usage_item(event)
@@ -52,9 +52,9 @@ function MainController.open_usage_fluid(event)
 end
 
 function MainController.change_tab(event, name)
-  Tabs.set_cur_tab(tab_name, Tabs.get_tab_name(tab_name, name))
-  MainGui.draw_tabs(tab_name)
-  out(name)
+  --Tabs.set_cur_tab(tab_name, Tabs.get_tab_name(tab_name, name))
+  --MainGui.draw_tabs(tab_name)
+  --out(name)
 end
 
 return MainController
