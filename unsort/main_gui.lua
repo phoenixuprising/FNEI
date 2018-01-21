@@ -102,7 +102,7 @@ function MainGui.open_window()
 end
 
 function MainGui.draw_factorio_search_tab()
-  local gui = Gui.get_gui(Gui.get_pos(), "content_tb_name")
+  --local gui = Gui.get_gui(Gui.get_pos(), "content_tb_name")
 
   -- if gui then
   --   Gui.add_gui_template(gui, factorio_search_tab)
