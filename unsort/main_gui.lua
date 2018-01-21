@@ -37,7 +37,7 @@ function MainGui.init_template()
 
   ------------------ content -------------------
 
-          { type = "flow", name = content_tb_name, style = "fnei_settings_tab-flow" },
+          { type = "flow", name = "content_tb_name", style = "fnei_settings_tab-flow" },
 
         }}
       }}
@@ -102,7 +102,7 @@ function MainGui.open_window()
 end
 
 function MainGui.draw_factorio_search_tab()
-  local gui = Gui.get_gui(Gui.get_pos(), content_tb_name)
+  local gui = Gui.get_gui(Gui.get_pos(), "content_tb_name")
 
   -- if gui then
   --   Gui.add_gui_template(gui, factorio_search_tab)
