@@ -7,7 +7,7 @@ local main_gui_template
 local factorio_search_tab
 local fnei_search_tab
 local categoty_search_tab
-local content_tb_name = "main-table"
+local content_tb_name = "super-main-table"
 local tab_flow_name = "main-tabs-flow"
 
 function MainGui.init_template()
