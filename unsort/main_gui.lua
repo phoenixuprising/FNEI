@@ -102,7 +102,8 @@ function MainGui.open_window()
 end
 
 function MainGui.draw_factorio_search_tab()
-  --local gui = Gui.get_gui(Gui.get_pos(), "content_tb_name")
+  
+  local gui = Gui.get_gui(Gui.get_pos(), "content_tb_name")
 
   -- if gui then
   --   Gui.add_gui_template(gui, factorio_search_tab)
@@ -110,6 +111,8 @@ function MainGui.draw_factorio_search_tab()
   --   Debag:error("Error in function MainGui.draw_factorio_search_tab(): gui == nil")
   -- end
 end
+
+
 
 function MainGui.settings_key_event(event)
   Controller.open_event("settings")

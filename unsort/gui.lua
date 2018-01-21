@@ -56,13 +56,14 @@ end
 function Gui:get_gui_proc(gui, name)
   if not self.result then self.result = {} end
   if not gui then return end
-  for k,v in pairs(gui.children_names) do
-    if gui and gui[v] then
-      if gui[v].name == name then
-        self.result = gui[v]
+  for _,g in pairs(gui.children) do
+    out(g.name)
+    if g and g.valid then
+      if g.name == name then
+        self.result = g
         break
       end
-      self.result = self:get_gui_proc(gui[v], name)
+      self.result = self:get_gui_proc(g, name)
     end
   end
   return self.result
