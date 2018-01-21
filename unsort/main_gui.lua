@@ -37,8 +37,8 @@ function MainGui.init_template()
 
   ------------------ content -------------------
 
-          { type = "flow", name = "content_tb_name", style = "fnei_settings_tab-flow" },
-
+          { type = "label", name = "header-label1", caption = "ebanoe govno" },
+          { type = "label", name = "header-label2", caption = "ebanoe govno" },
         }}
       }}
     }}
@@ -98,7 +98,8 @@ function MainGui.open_window()
   local gui = Gui.add_gui_template(Gui.get_pos(), main_gui_template)
   MainGui.draw_factorio_search_tab()
 
-  local sdf = Gui.get_gui(Gui.get_pos(), "content_tb_name")
+  local sdf = Gui.get_gui(Gui.get_pos(), "header-label1")
+  local sdf2 = Gui.get_gui(Gui.get_pos(), "header-label2")
 
   return gui
 end
