@@ -16,7 +16,7 @@ function MainGui.init_template()
   main_gui_template = {
     { type = "flow", name = "main-flow", style = "fnei_recipe_flow", children = {
       { type = "frame", name = "main-frame", style = "fnei_recipe_main_frame", children = {
-        { type = "table", name = content_tb_name, style = "fnei_recipe_main_table", column_count = 1, children = {
+        { type = "flow", name = content_tb_name, direction = "vertical", children = {
 
   ------------------ header ------------------
 
@@ -96,10 +96,14 @@ function MainGui.open_window()
   MainGui.close_window()
 
   local gui = Gui.add_gui_template(Gui.get_pos(), main_gui_template)
-  MainGui.draw_factorio_search_tab()
+  --MainGui.draw_factorio_search_tab()
 
   local sdf = Gui.get_gui(Gui.get_pos(), "header-label2")
   local sdf2 = Gui.get_gui(Gui.get_pos(), "header-label1")
+
+  --gui =  Gui.get_gui(Gui.get_pos(), main_gui_template[1].name)
+  --out(gui.valid)
+  --gui.add({ type = "sprite-button", name = "sdfgfdsfg", style = "fnei_settings_button_style", tooltip = {"gui-menu.options"} })
 
   return gui
 end
