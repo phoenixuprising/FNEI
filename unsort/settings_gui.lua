@@ -22,18 +22,24 @@ function SettingsGui.init_template()
               { type = "label", name = "header-label", style = "fnei_settings_header-label", caption = {"gui-menu.options"} },
               { type = "sprite-button", name = "back-key", style = "fnei_back_button_style", tooltip = {"gui.cancel"}, event = Controller.back_key_event },
               { type = "sprite-button", name = "exit-key", style = "fnei_exit_button_style", tooltip = {"gui.exit"}, event = Controller.main_key_event },
-            }}
+            }},
           }},
 
 ------------------ tabs ------------------
 
-          { type = "flow", name = tab_flow_name, style = "fnei_settings_tab-flow" },
+          -- { type = "flow", name = tab_flow_name, style = "fnei_settings_tab-flow", children = {
+          --   { type = "sprite-button", name = "back-key2", style = "fnei_back_button_style", tooltip = {"gui.cancel"} },
+          -- }},
+          { type = "flow", name = tab_flow_name .. "2", style = "fnei_settings_tab-flow", children = {
+            { type = "sprite-button", name = "back-key3", style = "fnei_exit_button_style", tooltip = {"gui.cancel"} },
+          }},
 
 ------------------ settings ------------------
 
           { type = "frame", name = "content-frame", style = "fnei_settings_content-frame", direction = "horizontal", children = {
-            { type = "table", name = content_gui_name, style = "fnei_settings_content-table", column_count = 2}
-          }}
+            { type = "table", name = content_gui_name, style = "fnei_settings_content-table", column_count = 2},
+          }},
+
         }}  
       }}
     }}

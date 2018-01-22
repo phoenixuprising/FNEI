@@ -37,8 +37,8 @@ function MainGui.init_template()
 
   ------------------ content -------------------
 
-          { type = "label", name = "header-label1", caption = "ebanoe govno" },
-          { type = "label", name = "header-label2", caption = "ebanoe govno" },
+          { type = "label", name = "header-lagfh", caption = "ebanoe govno" },
+          { type = "label", name = "header-labfgh", caption = "ebanoe govno" },
         }}
       }}
     }}

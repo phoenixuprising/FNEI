@@ -15,13 +15,13 @@ function SettingsController.open()
 
   local ret_gui = SettingsGui.open_window()
   SettingsGui.draw_tabs(tabs)
-  SettingsController.draw_settings()
+  --SettingsController.draw_settings()
 
   return ret_gui
 end
 
 function SettingsController.draw_settings()
-  --SettingsGui.add_option_list(Settings.get_sett_list(), tabs:get_cur_tab())
+  SettingsGui.add_option_list(Settings.get_sett_list(), tabs:get_cur_tab())
 end
 
 function SettingsController.back_key()
@@ -42,7 +42,7 @@ function SettingsController.new_gui_location(event, sett_name)
 end
 
 function SettingsController.set_new_tab_event(event, gui_name)
-  --SettingsGui.draw_tabs(tabs)
+  SettingsGui.draw_tabs(tabs)
   --SettingsController.draw_settings(tabs:get_cur_tab())
 end
 
